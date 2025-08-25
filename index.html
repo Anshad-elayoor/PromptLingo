@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptLingo - Learn Prompt Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">🦉 PromptLingo</div>
+            <div class="tagline">Master the Art of AI Communication</div>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-icon xp-icon">⚡</div>
+                <span id="xp-display">0 XP</span>
+            </div>
+            <div class="stat">
+                <div class="stat-icon streak-icon">🔥</div>
+                <span id="streak-display">0 Day Streak</span>
+            </div>
+            <div class="stat">
+                <div class="stat-icon level-icon">🏆</div>
+                <span id="level-display">Level 1</span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div id="welcome-screen" class="welcome-screen">
+                <div class="owl">🦉</div>
+                <h1 class="welcome-title">Welcome to PromptLingo!</h1>
+                <p class="welcome-description">
+                    Learn the art of prompt engineering by getting our AI character to say specific words and phrases. 
+                    Master the skill of crafting precise, effective prompts that get the results you want!
+                </p>
+                <button class="start-button" onclick="startGame()">Start Learning</button>
+            </div>
+
+            <div id="game-screen" class="hidden">
+                <div class="level-header">
+                    <h2 class="level-title" id="level-title">Level 1: Basic Prompting</h2>
+                    <div class="level-objective" id="level-objective">
+                        Get the AI to say the word "banana" in its response
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="chat-area" id="chat-area">
+                    <div class="message">
+                        <div class="message-avatar ai-avatar">🤖</div>
+                        <div class="message-content">Hi! I'm your AI companion. Try to get me to say something specific through your prompts!</div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" class="prompt-input" id="prompt-input" placeholder="Type your prompt here..." maxlength="200">
+                    <button class="send-button" id="send-button" onclick="sendPrompt()">Send</button>
+                </div>
+
+                <div class="hints-section">
+                    <div class="hints-title" onclick="toggleHints()">💡 Need a hint? Click here!</div>
+                    <div class="hints-content" id="hints-content">
+                        Try asking about fruits, or what I like to eat!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-animation" id="success-animation">
+        <div class="success-content">
+            <div class="success-title">🎉</div>
+            <div class="success-message" id="success-message">Level Complete!</div>
+            <button class="continue-button" onclick="nextLevel()">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
